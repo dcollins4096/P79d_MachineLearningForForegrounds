@@ -1,16 +1,40 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+%\documentclass[iop]{emulateapj}  % this makes everything look like ApJ
+%\documentclass[12pt,preprint]{aastex}  % for e-submission to ApJ
+\documentclass[12pt]{article}  % for e-submission to ApJ
+%\documentclass[12pt,preprint2]{aastex}  % for e-submission to ApJ - two column
+%\documentclass[manuscript]{emulateapj}  % this makes everything look like ApJ
 
-\title{Machine Learning For Foregrounds}
-\author{ }
-\date{February 2026}
+\usepackage{graphicx, natbib, color, bm, amsmath, epsfig}
+
+\citestyle{aa}  % correct formatting for ApJ style files
 
 \begin{document}
+%\input{title}
+%\maketitle
+\def\apjs{APJS}
+\def\apj{APJ}
 
-\maketitle
+\newif\ifpdf
+\pdftrue
 
-\section{Introduction}
+%\tableofcontents
+\input{introduction}
 
-words
+I'll probably cite \citet{Padoan02} if I want more than one, use commas
+\citet{Collins09, Collins12, Krumholz05}, \citet{Bryan14}
+
+%\begin{figure} \begin{center}
+%    \includegraphics[width=0.49\textwidth]{Serkowski-LowerWavelength-Polarization-Paper08-B20-RS0050-x-_Stokes_HRO_Sigma.png}
+%    \includegraphics[width=0.49\textwidth]{Serkowski-LowerWavelength-Polarization-Paper08-B20-RS0050-x-phi_cut.png}
+%\caption[ ]{The figure on the Left is what? vs the right? }
+%\label{} \end{center} \end{figure}
+
+\bibliographystyle{apj}
+\bibliography{apj-jour,ms}  % looks in ms.bib for bibliography info
+
+\end{document}  
+
+
 
 \end{document}
+=======
