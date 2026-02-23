@@ -1,0 +1,210 @@
+
+
+%%%% PUT NEW COMMANDS AND DEFINITIONS HERE %%%%
+\usepackage{graphicx, natbib, color, bm, amsmath, epsfig}
+
+%
+% Hijacked and hacked from aastex.cls
+%
+%\def\newblock{\hskip .11em\@plus.33em\@minus.07em}%
+
+%\newcommand\plotone[1]{%
+% \typeout{Plotone included the file #1}
+% \centering
+% \leavevmode
+% \includegraphics[width={\eps@scaling\columnwidth}]{#1}%
+%}
+%\newcommand\plotone[1]{
+% \includegraphics[width=3.0in]{#1}%
+%}
+%\let\tableline=\hline
+%enzo commands
+\newcommand\jcompphys{J.~Comput.~Phys}
+\newcommand\physfluidsa{Phys.~Fluids~A}
+\newcommand\physfluids{Phys.~Fluids}
+\newcommand\physlettA{Phys.~Lett.~A}
+\newcommand\jfm{J.~Fluid~Mech.}
+\newcommand\ccm{Comput.~Phys.~Commun.}
+\newcommand\jphysique{J.~Physique~I}
+\newcommand\revmodphys{Rev.~Mod.~Phys.~}
+
+%\newcommand\aap{\ref@jnl{A\&A}}% 
+%\newcommand\prb{\ref@jnl{Phys.~Rev.~B}}% 
+          % Physical Review B: Solid State 
+
+
+\newcommand{\ratio}{\mathcal{R}}
+\newcommand{\yt}{{\tt yt}}
+\newcommand{\Lmax}{\ell_{\rm max}}
+\newcommand{\enzo}{{\small Enzo}}
+\newcommand{\menzo}{{EnzoMHD}}
+\newcommand{\Menzo}{{EnzoMHD}}
+\newcommand{\zeus}{{\small ZEUS}}
+\newcommand{\Lbox}{L_{\rm box}}
+\newcommand{\Nroot}{N_{\rm root}}
+\newcommand{\K}{\,\rm K}
+\newcommand{\dave}{DaveThena}
+\newcommand{\grid}{{\tt grid}}
+
+%\newcommand{\lct}[3]{\ensuremath{\epsilon_{#1,#2,#3}}}
+\newcommand{\lct}[1]{\ensuremath{\epsilon_{#1}}}
+%grid location commands.
+\newcommand{\iph}{i + \frac{1}{2}}
+\newcommand{\imh}{i - \frac{1}{2}}
+\newcommand{\jph}{j + \frac{1}{2}}
+\newcommand{\jmh}{j - \frac{1}{2}}
+\newcommand{\kph}{k + \frac{1}{2}}
+\newcommand{\kmh}{k - \frac{1}{2}}
+
+\newcommand{\ipmh}{i \pm \frac{1}{2}}
+\newcommand{\half}{\ensuremath{\frac{1}{2}}}
+\newcommand{\quart}{\frac{1}{4}}
+\newcommand{\tquart}{\frac{3}{4}}
+
+%physics commands
+\newcommand{\avir}{\ensuremath{\alpha_{\rm{vir}}}}
+\newcommand{\mach}{\ensuremath{\mathcal{M_S}}}
+\newcommand{\hmag}{\ensuremath{H_{\rm{M}}}}
+\newcommand{\alfmach}{\ensuremath{\mathcal{M_{\rm{A}}}}}
+\newcommand{\Ma}{\ensuremath{\mathcal{M_{\rm{A}}}}}
+\newcommand{\Ms}{\ensuremath{\mathcal{M_{\rm{s}}}}}
+%\newcommand{\msun}{\ensuremath{\rm{M}_\odot}}
+\newcommand{\msun}{\ensuremath{M_\odot}}
+\newcommand{\lsun}{\ensuremath{L_\odot}}
+\newcommand{\rsun}{\ensuremath{R_\odot}}
+
+\def\mch{\ensuremath{M_{\rm{Ch}}}}
+\def\AD{{\rm{AD}}}
+
+%math commands
+\def\rms{\ensuremath{\rm{rms}}}
+\newcommand{\pts}[1]{\emph{(#1 pts)}}
+\newcommand{\dbd}[2]{\frac{ \partial #1 }{ \partial #2} }
+\newcommand{\ddbd}[2]{\frac{ d #1 }{ d #2} }
+\newcommand{\dDbD}[2]{\frac{ \mathrm{D} #1 }{ \mathrm{D} #2} }
+\newcommand{\curl}{\nabla \times}
+\newcommand{\divb}{\ensuremath{\nabla \cdot {\bvec}}}
+\newcommand{\divv}{\ensuremath{\nabla \cdot {\vvec}}}
+\newcommand{\divbo}{$\nabla \cdot {\bf B} = 0$}
+\newcommand{\intd}[1]{\int_#1^{#1 + \Delta #1} }
+\newcommand{\dt}{\Delta t}
+\newcommand{\dx}{\Delta x}
+\newcommand{\dy}{\Delta y}
+\newcommand{\dz}{\Delta z}
+\newcommand{\p}[1]{#1^\prime }
+\newcommand{\pp}[1]{#1^{\prime \prime} }
+\newcommand{\tff}{\ensuremath{t_{\rm{ff}}}}
+\newcommand{\kkmin}{\ensuremath{k/k_{\rm{min}}}}
+\newcommand{\kmax}{\ensuremath{k_{\rm{max}}}}
+
+%dcc color commands
+\definecolor{orange}{rgb}{1.        ,  0.54,  0}
+\newcommand{\orange}[1]{\textcolor{orange}{#1}}
+
+\newcommand{\gtt}[1]{\textcolor{green}{{\tt#1}}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\yellow}[1]{\textcolor{yellow}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\definecolor{purple}{rgb}{0.5,0.0,0.5} %cadet blue for
+\newcommand{\purple}[1]{\textcolor{purple}{#1}}
+\definecolor{meta}{rgb}{0.371,0.617,0.625} %cadet blue for
+                                           %non-production worthy
+                                           % discussion of the work
+\newcommand{\meta}[1]{\textcolor{meta}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\aake}[1]{\textcolor{blue}{#1}}
+%\newcommand{\bld}[1]{\mathbf{#1}}
+
+\def\here{\red{notes later}}
+%\newcommand{\hilite}[1]{\textcolor{red}{#1}}
+%\newcommand{\hilite}[1]{#1}
+
+%\newcommand{\bold}[1]{{\bf #1}}
+%the comment maker, dc: the first one will show all comments in green, 
+%the second hides them all.
+%\newcommand{\dc}[1]{\textcolor{green}{#1}}
+\newcommand{\dc}[1]{}
+%\newcommand{\dc}[1]{#1}
+%\def\bvec{\ensuremath{\vec{B}}}
+%\def\vvec{\ensuremath{\vec{v}}}
+\def\Bvec{\ensuremath{{\bf B}}}
+\def\Hvec{\ensuremath{{\mathbf H}}}
+\def\Jvec{\ensuremath{{\bf J}}}
+\def\Avec{\ensuremath{{\bf A}}}
+\def\Evec{\ensuremath{{\bf E}}}
+\def\bvec{\ensuremath{{\bf b}}}
+\def\vvec{\ensuremath{{\bf v}}}
+\def\uvec{\ensuremath{{\bf u}}}
+\def\rvec{\ensuremath{{\bf r}}}
+\def\xvec{\ensuremath{{\bf x}}}
+\def\yvec{\ensuremath{{\bf y}}}
+\def\kvec{\ensuremath{{\bf k}}}
+\def\Kvec{\ensuremath{{\bf K}}}
+\def\Xvec{\ensuremath{{\bf X}}}
+\def\Yvec{\ensuremath{{\bf Y}}}
+\def\Omegavec{\ensuremath{{\bf \Omega}}}
+\def\omegavec{\ensuremath{{\bf \omega}}}
+%\newcommand{\BlockOut}[1]{}
+\newcommand{\BlockOut}[1]{#1}
+\newcommand{\imp}{\ensuremath{\implies}}
+\newcommand{\question}[1]{\textcolor{red}{#1}}
+\definecolor{pink}{rgb}{1.        ,  0.75294118,  0.79607843}
+\definecolor{maroon}{rgb}{0.69019608,  0.18823529,  0.37647059}
+\newcommand{\ToRead}[1]{\textcolor{maroon}{#1}}
+\newcommand{\ToReadUrgent}[1]{\textcolor{red}{#1}}
+\newcommand{\HaveRead}[1]{\textcolor{black}{#1}}
+\newcommand{\Old}[1]{\textcolor{blue}{#1}}
+\newcommand{\Scanned}[1]{\textcolor{meta}{#1}}
+\newcommand{\dccnote}[1]{}
+%\newcommand{\dccnote}[1]{\textcolor{red}{#1}}
+\def\nn{\nonumber}
+
+\newcommand{\get}[1]{\textcolor{red}{#1}}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\newcommand{\gray}[1]{\textcolor{gray}{#1}}
+\newcommand{\clean}[1]{\textcolor{gray}{#1}}
+\newcommand{\ToDo}[1]{\textcolor{red}{#1}}
+\def\etal{{\sl et al.}}
+
+%chemistry commands
+\newcommand{\Htwo}{\ensuremath{\rm{H}_2}}
+\newcommand{\twelveco}{\ensuremath{^{12}\rm{CO}}}
+\newcommand{\thirteenco}{\ensuremath{^{13}\rm{CO}}}
+
+\newcommand{\mhdlabel}{{_{MHD}}}
+\newcommand{\gravlabel}{{_{Grav}}}
+\newcommand{\fclabel}{{_{fc}}}
+\newcommand{\explabel}{{_{exp}}}
+\newcommand{\sciform}[1]{\ensuremath{\times {10^{#1}}}}
+\newcommand{\percc}{\ensuremath{\rm{cm}^{-3}}}
+\newcommand{\gcc}{\ensuremath{\rm{g}\ \rm{cm}^{-3}}}
+\newcommand{\kms}{\ensuremath{\rm{km}\ \rm{s}^{-1}}}
+\newcommand{\cms}{\ensuremath{\rm{cm}\ \rm{s}^{-1}}}
+\newcommand{\cmperg}{\ensuremath{\rm{cm}^{2}\ \rm{g}^{-1} }}
+\newcommand{\cmcmpers}{\ensuremath{\rm{cm}^2\ \rm{s}^{-1} }}
+\def\muG{\ensuremath{\mu\rm{G}}}
+\def\micron{\ensuremath{\mu\rm{m}}}
+\def\alf{Alfv\' en}
+\def\Alfvenic{Alfv\' enic}
+\def\sa{super-Alfv\' enic}
+\def\Sa{Super-Alfv\' enic}
+\def\suba{sub-Alfv\' enic}
+\def\Suba{Sub-Alfv\' enic}
+\def\transa{trans-Alfv\' enic}
+\def\Transa{Trans-Alfv\' enic}
+\def\cs{\ensuremath{c_{\rm{s}}}}
+\def\va{\ensuremath{v_{\rm{A}}}}
+\def\sfrff{\ensuremath{{\rm SFR_{ff}}}}
+%\def\velocity{\ensuremath{\vec{v}}}
+%\def\magnetic{\ensuremath{\vec{B}}}
+\def\velocity{\ensuremath{{\bf v}}}
+\def\magnetic{\ensuremath{{\bf B}}}
+\newcommand{\Fourier}[1]{\ensuremath{\tilde{#1}}}
+\def\hfw{0.49}
+\def\hw{0.49}
+\def\fw{0.9}
+
+\def\ssp{\def\baselinestretch{1.0}\large\normalsize}
+
+\def\rhoc{\ensuremath{\rho_{\rm{c}}}}
+\def\erf{\ensuremath{\rm{erf}}}
